@@ -1,0 +1,30 @@
+<div class="owp-app">
+  <owp-toolbar />
+
+  <main
+    class="owp-shell"
+    [class.owp-shell--sidebar-open]="ui.sidebarOpen()"
+  >
+    <owp-orrery-canvas class="owp-shell__canvas" />
+    <owp-sidebar class="owp-shell__sidebar" />
+    @if (ui.sidebarOpen()) {
+      <button
+        type="button"
+        class="owp-shell__backdrop"
+        [attr.aria-label]="i18n.t('toolbar.menu')"
+        (click)="ui.setSidebarOpen(false)"
+      ></button>
+    }
+  </main>
+
+  <footer class="owp-shell__footer">
+    <owp-time-player />
+    <owp-scale-controls />
+  </footer>
+
+  <owp-real-scale-banner />
+
+  @if (ui.compareOpen()) {
+    <owp-compare-panel />
+  }
+</div>

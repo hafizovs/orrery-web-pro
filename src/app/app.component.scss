@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.owp-app {
+  display: grid;
+  grid-template-rows: var(--owp-toolbar-height) 1fr auto;
+  width: 100%;
+  height: 100%;
+  background: #02050c;
+  color: var(--owp-text);
+  overflow: hidden;
+}
+
+.owp-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr var(--owp-sidebar-width);
+  grid-template-rows: 1fr;
+  min-height: 0;
+  min-width: 0;
+  z-index: var(--owp-z-canvas);
+}
+
+.owp-shell__canvas {
+  position: relative;
+  z-index: var(--owp-z-canvas);
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.owp-shell__sidebar {
+  position: relative;
+  z-index: var(--owp-z-panels);
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  border-left: 1px solid var(--owp-border);
+  background: var(--owp-bg-panel);
+}
+
+.owp-shell__backdrop {
+  display: none;
+}
+
+.owp-shell__footer {
+  position: relative;
+  z-index: var(--owp-z-panels);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--owp-border);
+  background: var(--owp-bg-panel);
+}
+
+@media (max-width: 899px) {
+  .owp-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .owp-shell__sidebar {
+    position: fixed;
+    top: var(--owp-toolbar-height);
+    right: 0;
+    bottom: 0;
+    width: min(var(--owp-sidebar-width), 88vw);
+    transform: translateX(100%);
+    transition: transform 200ms ease;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .owp-shell--sidebar-open .owp-shell__sidebar {
+    transform: translateX(0);
+  }
+
+  .owp-shell__backdrop {
+    display: block;
+    position: fixed;
+    inset: var(--owp-toolbar-height) 0 0 0;
+    z-index: calc(var(--owp-z-panels) - 1);
+    border: 0;
+    padding: 0;
+    background: rgba(2, 5, 12, 0.55);
+  }
+}
