@@ -1,0 +1,70 @@
+:host {
+  display: contents;
+}
+
+.owp-real-scale-banner {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 72px;
+  z-index: var(--owp-z-banners);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 920px;
+  margin-inline: auto;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--owp-accent-warm) 45%, var(--owp-border));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--owp-bg-panel-elevated) 92%, var(--owp-accent-warm));
+  color: var(--owp-text);
+  pointer-events: auto;
+  animation: owp-banner-in 200ms ease;
+}
+
+.owp-real-scale-banner__text {
+  margin: 0;
+  flex: 1 1 280px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.owp-real-scale-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.owp-real-scale-banner__btn {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--owp-border);
+  border-radius: 6px;
+  background: var(--owp-bg-panel);
+  color: var(--owp-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.owp-real-scale-banner__btn--primary {
+  border-color: color-mix(in srgb, var(--owp-accent) 55%, var(--owp-border));
+  color: var(--owp-accent);
+}
+
+.owp-real-scale-banner__btn:focus-visible {
+  outline: none;
+  box-shadow: var(--owp-focus-ring);
+}
+
+@keyframes owp-banner-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

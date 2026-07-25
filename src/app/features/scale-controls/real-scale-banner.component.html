@@ -1,0 +1,27 @@
+@if (visible()) {
+  <div
+    class="owp-real-scale-banner"
+    role="status"
+    aria-live="polite"
+  >
+    <p class="owp-real-scale-banner__text">{{ i18n.t('scale.realWarning') }}</p>
+    <div class="owp-real-scale-banner__actions">
+      <button
+        type="button"
+        class="owp-real-scale-banner__btn owp-real-scale-banner__btn--primary"
+        [attr.aria-label]="i18n.t('scale.goVisual')"
+        (click)="goVisual()"
+      >
+        {{ i18n.t('scale.goVisual') }}
+      </button>
+      <button
+        type="button"
+        class="owp-real-scale-banner__btn"
+        [attr.aria-label]="i18n.t('scale.dismiss')"
+        (click)="dismiss()"
+      >
+        {{ i18n.t('scale.dismiss') }}
+      </button>
+    </div>
+  </div>
+}

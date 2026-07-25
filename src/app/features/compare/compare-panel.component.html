@@ -1,0 +1,75 @@
+<aside class="owp-compare" role="dialog" [attr.aria-label]="i18n.t('compare.title')">
+  <header class="owp-compare__header">
+    <h2 class="owp-compare__title">{{ i18n.t('compare.title') }}</h2>
+    <button
+      type="button"
+      class="owp-compare__close"
+      [attr.aria-label]="i18n.t('scale.dismiss')"
+      (click)="close()"
+    >
+      ×
+    </button>
+  </header>
+
+  <div class="owp-compare__checklist">
+    @for (body of visibleBodies(); track body.id) {
+      <label class="owp-compare__check">
+        <input
+          type="checkbox"
+          [checked]="isChecked(body.id)"
+          [disabled]="isDisabled(body.id)"
+          (change)="toggleBody(body.id)"
+        />
+        <span
+          class="owp-compare__swatch"
+          [style.background]="body.color"
+          aria-hidden="true"
+        ></span>
+        <span>{{ i18n.t(body.nameKey) }}</span>
+      </label>
+    }
+  </div>
+
+  @if (limitReached()) {
+    <p class="owp-compare__limit">{{ i18n.t('compare.limit') }}</p>
+  }
+
+  @if (selectedBodies().length === 0) {
+    <p class="owp-compare__empty">{{ i18n.t('compare.empty') }}</p>
+  } @else {
+    <div class="owp-compare__table-wrap">
+      <table class="owp-compare__table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            @for (body of selectedBodies(); track body.id) {
+              <th scope="col">{{ i18n.t(body.nameKey) }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of metricRows(); track row.key) {
+            <tr>
+              <th scope="row">{{ i18n.t(row.labelKey) }}</th>
+              @for (value of row.values; track $index) {
+                <td>{{ value }}</td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  <footer class="owp-compare__footer">
+    <button
+      type="button"
+      class="owp-compare__clear"
+      [attr.aria-label]="i18n.t('compare.clear')"
+      [disabled]="selectedBodies().length === 0"
+      (click)="clear()"
+    >
+      {{ i18n.t('compare.clear') }}
+    </button>
+  </footer>
+</aside>

@@ -1,0 +1,92 @@
+<header class="owp-toolbar" role="banner">
+  <div class="owp-toolbar__brand" aria-label="Orrery Web Pro">
+    <span class="owp-toolbar__brand-name">Orrery Web Pro</span>
+    <span class="owp-toolbar__brand-sub">{{ i18n.t('app.subtitle') }}</span>
+  </div>
+
+  <div class="owp-toolbar__spacer"></div>
+
+  <div class="owp-toolbar__actions" role="toolbar" [attr.aria-label]="i18n.t('app.title')">
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [class.is-pressed]="ui.showLabels()"
+      [attr.aria-label]="i18n.t('toolbar.labels')"
+      [attr.aria-pressed]="ui.showLabels()"
+      (click)="onToggleLabels()"
+    >
+      {{ i18n.t('toolbar.labels') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [class.is-pressed]="ui.showDwarfs()"
+      [attr.aria-label]="i18n.t('toolbar.dwarfs')"
+      [attr.aria-pressed]="ui.showDwarfs()"
+      (click)="onToggleDwarfs()"
+    >
+      {{ i18n.t('toolbar.dwarfs') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [class.is-pressed]="ui.showComets()"
+      [attr.aria-label]="i18n.t('toolbar.comets')"
+      [attr.aria-pressed]="ui.showComets()"
+      (click)="onToggleComets()"
+    >
+      {{ i18n.t('toolbar.comets') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [class.is-pressed]="ui.compareOpen()"
+      [attr.aria-label]="i18n.t('toolbar.compare')"
+      [attr.aria-pressed]="ui.compareOpen()"
+      (click)="onToggleCompare()"
+    >
+      {{ i18n.t('toolbar.compare') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [attr.aria-label]="i18n.t('toolbar.screenshot')"
+      (click)="onScreenshot()"
+    >
+      {{ i18n.t('toolbar.screenshot') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn"
+      [attr.aria-label]="i18n.t('toolbar.theme')"
+      (click)="onToggleTheme()"
+    >
+      {{ i18n.t('toolbar.theme') }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn owp-toolbar__btn--lang"
+      [attr.aria-label]="i18n.t('toolbar.lang')"
+      (click)="onToggleLang()"
+    >
+      {{ ui.locale() === 'ru' ? 'RU' : 'EN' }}
+    </button>
+
+    <button
+      type="button"
+      class="owp-toolbar__btn owp-toolbar__btn--menu"
+      [class.is-pressed]="ui.sidebarOpen()"
+      [attr.aria-label]="i18n.t('toolbar.menu')"
+      [attr.aria-pressed]="ui.sidebarOpen()"
+      (click)="onToggleMenu()"
+    >
+      {{ i18n.t('toolbar.menu') }}
+    </button>
+  </div>
+</header>

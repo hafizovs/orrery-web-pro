@@ -1,0 +1,29 @@
+<div class="owp-body-list" role="listbox" [attr.aria-label]="i18n.t('app.subtitle')">
+  @for (section of sections(); track section.id) {
+    <section class="owp-body-list__section">
+      <h3 class="owp-body-list__heading">{{ i18n.t(section.labelKey) }}</h3>
+      <ul class="owp-body-list__items">
+        @for (body of section.bodies; track body.id) {
+          <li>
+            <button
+              type="button"
+              class="owp-body-list__item"
+              role="option"
+              [class.is-selected]="selectedBodyId() === body.id"
+              [attr.aria-current]="selectedBodyId() === body.id ? 'true' : null"
+              [attr.aria-selected]="selectedBodyId() === body.id"
+              (click)="selectAndFollow(body)"
+            >
+              <span
+                class="owp-body-list__swatch"
+                [style.background]="body.color"
+                aria-hidden="true"
+              ></span>
+              <span class="owp-body-list__name">{{ i18n.t(body.nameKey) }}</span>
+            </button>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</div>
