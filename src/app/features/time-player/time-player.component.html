@@ -1,0 +1,48 @@
+<section class="owp-time-player" [attr.aria-label]="i18n.t('time.play')">
+  <button
+    type="button"
+    class="owp-time-player__play"
+    [class.is-pressed]="simulation.isPlaying()"
+    [attr.aria-label]="playLabel()"
+    [attr.aria-pressed]="simulation.isPlaying()"
+    (click)="togglePlay()"
+  >
+    {{ playLabel() }}
+  </button>
+
+  <div
+    class="owp-time-player__presets"
+    role="group"
+    [attr.aria-label]="i18n.t('time.speed')"
+  >
+    @for (preset of presets; track preset) {
+      <button
+        type="button"
+        class="owp-time-player__preset"
+        [class.is-active]="isPresetActive(preset)"
+        [attr.aria-pressed]="isPresetActive(preset)"
+        [attr.aria-label]="presetLabel(preset)"
+        (click)="setPreset(preset)"
+      >
+        {{ presetLabel(preset) }}
+      </button>
+    }
+  </div>
+
+  <label class="owp-time-player__slider">
+    <span class="owp-time-player__slider-label">{{ speedLabel() }}</span>
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.001"
+      [value]="sliderValue()"
+      [attr.aria-valuetext]="speedLabel()"
+      (input)="onSliderInput($event)"
+    />
+  </label>
+
+  <div class="owp-time-player__sim-time" aria-live="polite">
+    {{ simTimeLabel() }}
+  </div>
+</section>

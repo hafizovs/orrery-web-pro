@@ -1,0 +1,37 @@
+<section class="owp-scale-controls">
+  <div
+    class="owp-scale-controls__group"
+    role="radiogroup"
+    [attr.aria-label]="i18n.t('app.title')"
+  >
+    <button
+      type="button"
+      class="owp-scale-controls__btn"
+      role="radio"
+      [class.is-active]="isActive('real')"
+      [attr.aria-checked]="isActive('real')"
+      [attr.aria-label]="i18n.t('scale.real')"
+      (click)="setMode('real')"
+    >
+      {{ i18n.t('scale.real') }}
+    </button>
+    <button
+      type="button"
+      class="owp-scale-controls__btn"
+      role="radio"
+      [class.is-active]="isActive('visual')"
+      [attr.aria-checked]="isActive('visual')"
+      [attr.aria-label]="i18n.t('scale.visual')"
+      (click)="setMode('visual')"
+    >
+      {{ i18n.t('scale.visual') }}
+    </button>
+  </div>
+  <p class="owp-scale-controls__hint">
+    @if (isActive('real')) {
+      {{ i18n.t('scale.realHint') }}
+    } @else {
+      {{ i18n.t('scale.visualHint') }}
+    }
+  </p>
+</section>

@@ -1,0 +1,82 @@
+@if (body(); as selected) {
+  <article class="owp-body-card" [attr.aria-label]="i18n.t(selected.nameKey)">
+    <header class="owp-body-card__header">
+      <span
+        class="owp-body-card__swatch"
+        [style.background]="selected.color"
+        aria-hidden="true"
+      ></span>
+      <div class="owp-body-card__titles">
+        <h3 class="owp-body-card__name">{{ i18n.t(selected.nameKey) }}</h3>
+        <p class="owp-body-card__kind">{{ kindLabel() }}</p>
+      </div>
+    </header>
+
+    <dl class="owp-body-card__grid">
+      <div class="owp-body-card__row">
+        <dt>{{ i18n.t('card.kind') }}</dt>
+        <dd>{{ kindLabel() }}</dd>
+      </div>
+      <div class="owp-body-card__row">
+        <dt>{{ i18n.t('card.mass') }}</dt>
+        <dd>{{ massLabel() }}</dd>
+      </div>
+      <div class="owp-body-card__row">
+        <dt>{{ i18n.t('card.radius') }}</dt>
+        <dd>{{ radiusLabel() }}</dd>
+      </div>
+
+      @if (selected.elements) {
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.semiMajorAxis') }}</dt>
+          <dd>{{ semiMajorLabel() }}</dd>
+        </div>
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.eccentricity') }}</dt>
+          <dd>{{ eccentricityLabel() }}</dd>
+        </div>
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.period') }}</dt>
+          <dd>{{ periodLabel() }}</dd>
+        </div>
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.distanceSun') }}</dt>
+          <dd>{{ distanceSunLabel() }}</dd>
+        </div>
+        @if (selected.kind === 'moon') {
+          <div class="owp-body-card__row">
+            <dt>{{ i18n.t('card.distanceParent') }}</dt>
+            <dd>{{ distanceParentLabel() }}</dd>
+          </div>
+        }
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.speed') }}</dt>
+          <dd>{{ speedLabel() }}</dd>
+        </div>
+        <div class="owp-body-card__row">
+          <dt>{{ i18n.t('card.trueAnomaly') }}</dt>
+          <dd>{{ trueAnomalyLabel() }}</dd>
+        </div>
+      }
+    </dl>
+
+    <div class="owp-body-card__actions">
+      <button
+        type="button"
+        class="owp-body-card__btn"
+        [attr.aria-label]="i18n.t('sidebar.focusOff')"
+        (click)="disableFollow()"
+      >
+        {{ i18n.t('sidebar.focusOff') }}
+      </button>
+      <button
+        type="button"
+        class="owp-body-card__btn owp-body-card__btn--accent"
+        [attr.aria-label]="i18n.t('sidebar.addCompare')"
+        (click)="addToCompare()"
+      >
+        {{ i18n.t('sidebar.addCompare') }}
+      </button>
+    </div>
+  </article>
+}

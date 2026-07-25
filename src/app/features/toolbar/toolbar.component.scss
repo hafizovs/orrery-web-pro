@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: var(--owp-z-panels);
+  height: var(--owp-toolbar-height);
+}
+
+.owp-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--owp-border);
+  background: color-mix(in srgb, var(--owp-bg-panel) 92%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.owp-toolbar__brand {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.1;
+}
+
+.owp-toolbar__brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--owp-text);
+  white-space: nowrap;
+}
+
+.owp-toolbar__brand-sub {
+  font-size: 11px;
+  color: var(--owp-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.owp-toolbar__spacer {
+  flex: 1 1 auto;
+}
+
+.owp-toolbar__actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.owp-toolbar__btn {
+  flex: 0 0 auto;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--owp-border);
+  border-radius: 6px;
+  background: var(--owp-bg-panel-elevated);
+  color: var(--owp-text);
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease;
+}
+
+.owp-toolbar__btn:hover {
+  border-color: color-mix(in srgb, var(--owp-accent) 55%, var(--owp-border));
+}
+
+.owp-toolbar__btn:focus-visible {
+  outline: none;
+  box-shadow: var(--owp-focus-ring);
+}
+
+.owp-toolbar__btn.is-pressed {
+  border-color: var(--owp-accent);
+  background: color-mix(in srgb, var(--owp-accent) 18%, var(--owp-bg-panel-elevated));
+  color: var(--owp-accent);
+}
+
+.owp-toolbar__btn--lang {
+  min-width: 42px;
+  font-family: var(--owp-font-mono);
+}
+
+.owp-toolbar__btn--menu {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .owp-toolbar__brand-sub {
+    display: none;
+  }
+
+  .owp-toolbar__btn--menu {
+    display: inline-flex;
+    align-items: center;
+  }
+}

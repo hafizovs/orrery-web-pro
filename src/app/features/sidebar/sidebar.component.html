@@ -1,0 +1,21 @@
+<aside class="owp-sidebar" aria-label="Sidebar">
+  <div class="owp-sidebar__header">
+    <h2 class="owp-sidebar__title">{{ i18n.t('app.subtitle') }}</h2>
+    <button
+      type="button"
+      class="owp-sidebar__close"
+      [attr.aria-label]="i18n.t('toolbar.menu')"
+      (click)="close()"
+    >
+      ×
+    </button>
+  </div>
+
+  <div class="owp-sidebar__list">
+    <owp-body-list />
+  </div>
+
+  <div class="owp-sidebar__card">
+    <owp-body-card />
+  </div>
+</aside>

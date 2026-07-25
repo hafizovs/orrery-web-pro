@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.owp-scale-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 180px;
+}
+
+.owp-scale-controls__group {
+  display: inline-flex;
+  border: 1px solid var(--owp-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.owp-scale-controls__btn {
+  height: 34px;
+  padding: 0 12px;
+  border: 0;
+  border-right: 1px solid var(--owp-border);
+  background: var(--owp-bg-panel-elevated);
+  color: var(--owp-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.owp-scale-controls__btn:last-child {
+  border-right: 0;
+}
+
+.owp-scale-controls__btn.is-active {
+  background: color-mix(in srgb, var(--owp-accent) 18%, var(--owp-bg-panel-elevated));
+  color: var(--owp-accent);
+}
+
+.owp-scale-controls__btn:focus-visible {
+  outline: none;
+  box-shadow: inset var(--owp-focus-ring);
+}
+
+.owp-scale-controls__hint {
+  margin: 0;
+  font-size: 11px;
+  color: var(--owp-text-muted);
+}
