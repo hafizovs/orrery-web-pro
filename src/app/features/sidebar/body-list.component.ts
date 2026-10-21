@@ -5,10 +5,10 @@ import {
   inject,
 } from '@angular/core';
 import { CelestialBody } from '../../core/models/celestial-body.model';
-import { I18nService } from '../../services/i18n.service';
-import { CameraStore } from '../../state/camera.store';
-import { CatalogStore } from '../../state/catalog.store';
-import { SimulationStore } from '../../state/simulation.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { CameraStore } from '../orrery-canvas/camera.store';
+import { CatalogStore } from './catalog.store';
+import { SimulationStore } from '../orrery-canvas/simulation.store';
 
 interface BodyListSection {
   id: string;

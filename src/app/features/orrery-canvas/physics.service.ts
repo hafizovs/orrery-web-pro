@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { AU_KM, EARTH_MU_KM3_S2, SUN_MU_KM3_S2 } from '../core/constants/astronomy.constants';
-import { BodyId } from '../core/models/body-kind.model';
-import { BodyRuntimeState } from '../core/models/body-runtime-state.model';
-import { CelestialBody } from '../core/models/celestial-body.model';
-import { keplerPositionFromElements } from '../domain/astronomy/kepler';
-import { computeSpeedKmPerS } from '../domain/astronomy/vis-viva';
+import { AU_KM, EARTH_MU_KM3_S2, SUN_MU_KM3_S2 } from '../../core/constants/astronomy.constants';
+import { BodyId } from '../../core/models/body-kind.model';
+import { BodyRuntimeState } from '../../core/models/body-runtime-state.model';
+import { CelestialBody } from '../../core/models/celestial-body.model';
+import { keplerPositionFromElements } from '../../domain/astronomy/kepler';
+import { computeSpeedKmPerS } from '../../domain/astronomy/vis-viva';
 
 /** Alias used in product docs / physics notes. */
 const SUN_MU = SUN_MU_KM3_S2;

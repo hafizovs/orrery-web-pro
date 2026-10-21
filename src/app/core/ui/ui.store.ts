@@ -1,8 +1,8 @@
 import { Injectable, signal } from '@angular/core';
-import { BodyId } from '../core/models/body-kind.model';
-import { LocaleId } from '../core/models/locale.model';
-import { ScaleMode } from '../core/models/scale-mode.model';
-import { ThemeId } from '../core/models/theme.model';
+import { BodyId } from '../models/body-kind.model';
+import { LocaleId } from '../models/locale.model';
+import { ScaleMode } from '../models/scale-mode.model';
+import { ThemeId } from '../models/theme.model';
 
 @Injectable({ providedIn: 'root' })
 export class UiStore {

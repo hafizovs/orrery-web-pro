@@ -3,9 +3,9 @@ import { BodyRuntimeState } from '../../core/models/body-runtime-state.model';
 import { CelestialBody } from '../../core/models/celestial-body.model';
 import { PICK_RADIUS_PX } from '../../core/constants/render.constants';
 import { ZOOM_WHEEL_SENSITIVITY } from '../../core/constants/scale.constants';
-import { CameraStore } from '../../state/camera.store';
-import { SimulationStore } from '../../state/simulation.store';
-import { UiStore } from '../../state/ui.store';
+import { CameraStore } from './camera.store';
+import { SimulationStore } from './simulation.store';
+import { UiStore } from '../../core/ui/ui.store';
 import { bodyRadiusPx, worldAuToScreen } from './canvas-camera';
 
 const CLICK_MOVE_THRESHOLD_PX = 4;

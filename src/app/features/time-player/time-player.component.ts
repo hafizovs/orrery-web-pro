@@ -11,8 +11,8 @@ import {
   TIME_SCALE_PRESETS,
   TimeScalePresetId,
 } from '../../core/constants/time.constants';
-import { I18nService } from '../../services/i18n.service';
-import { SimulationStore } from '../../state/simulation.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { SimulationStore } from '../orrery-canvas/simulation.store';
 
 const PRESET_IDS: TimeScalePresetId[] = ['hour', 'day', 'month', 'year'];
 

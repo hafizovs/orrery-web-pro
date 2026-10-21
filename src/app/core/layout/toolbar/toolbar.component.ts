@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { I18nService } from '../../services/i18n.service';
 import { ScreenshotService } from '../../services/screenshot.service';
-import { UiStore } from '../../state/ui.store';
+import { UiStore } from '../../ui/ui.store';
 
 @Component({
   selector: 'owp-toolbar',

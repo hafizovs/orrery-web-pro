@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { CameraStore } from '../state/camera.store';
-import { SimulationStore } from '../state/simulation.store';
-import { UiStore } from '../state/ui.store';
+import { CameraStore } from '../../features/orrery-canvas/camera.store';
+import { SimulationStore } from '../../features/orrery-canvas/simulation.store';
+import { UiStore } from '../ui/ui.store';
 import { ScreenshotService } from './screenshot.service';
 
 @Injectable({ providedIn: 'root' })

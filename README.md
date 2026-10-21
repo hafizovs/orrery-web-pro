@@ -1,13 +1,14 @@
+## Live demo
+
+https://hafizovs.github.io/orrery-web-pro/
+
 # Orrery Web Pro
 
 Interactive Solar System simulator built with **Angular 22+** (standalone components, Signals, zoneless change detection, Canvas 2D).
 
-Product docs live at [`../docs/`](../docs/).
-
 ## Install
 
 ```bash
-cd orrery_web_pro_auto
 npm install
 ```
 
@@ -27,6 +28,12 @@ Then open the URL printed by the Angular CLI (usually `http://localhost:4200`).
 npm test
 # or unit-only:
 npm run test:unit
+```
+
+## Build
+
+```bash
+npm run build
 ```
 
 ## Hotkeys

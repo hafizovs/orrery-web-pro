@@ -8,12 +8,12 @@ import {
   viewChild,
 } from '@angular/core';
 import { MAX_DPR } from '../../core/constants/render.constants';
-import { CameraStore } from '../../state/camera.store';
-import { CatalogStore } from '../../state/catalog.store';
-import { SimulationStore } from '../../state/simulation.store';
-import { UiStore } from '../../state/ui.store';
-import { RenderLoopService } from '../../services/render-loop.service';
-import { ScreenshotService } from '../../services/screenshot.service';
+import { CameraStore } from './camera.store';
+import { CatalogStore } from '../sidebar/catalog.store';
+import { SimulationStore } from './simulation.store';
+import { UiStore } from '../../core/ui/ui.store';
+import { RenderLoopService } from '../../core/services/render-loop.service';
+import { ScreenshotService } from '../../core/services/screenshot.service';
 import { fitNeptuneZoom } from './canvas-camera';
 import { CanvasPointerController } from './canvas-pointer.controller';
 

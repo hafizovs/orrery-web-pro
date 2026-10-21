@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import { ZOOM_MAX, ZOOM_MIN } from '../core/constants/scale.constants';
-import { BodyId } from '../core/models/body-kind.model';
+import { ZOOM_MAX, ZOOM_MIN } from '../../core/constants/scale.constants';
+import { BodyId } from '../../core/models/body-kind.model';
 
 /**
  * Camera pan is in screen/CSS pixels relative to the canvas center.

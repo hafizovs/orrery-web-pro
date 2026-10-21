@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { TIME_SCALE_PRESETS } from '../core/constants/time.constants';
+import { TIME_SCALE_PRESETS } from '../../core/constants/time.constants';
 import { SimulationStore } from './simulation.store';
 
 describe('SimulationStore', () => {

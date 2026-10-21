@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ScaleMode } from '../../core/models/scale-mode.model';
-import { I18nService } from '../../services/i18n.service';
-import { UiStore } from '../../state/ui.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { UiStore } from '../../core/ui/ui.store';
 
 @Component({
   selector: 'owp-scale-controls',

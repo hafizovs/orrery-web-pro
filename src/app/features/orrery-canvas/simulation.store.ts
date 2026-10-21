@@ -4,11 +4,11 @@ import {
   TIME_SCALE_MIN,
   TIME_SCALE_PRESETS,
   TimeScalePresetId,
-} from '../core/constants/time.constants';
-import { BodyId } from '../core/models/body-kind.model';
-import { BodyRuntimeState } from '../core/models/body-runtime-state.model';
-import { BODY_BY_ID, CELESTIAL_BODIES } from '../domain/bodies/body-catalog';
-import { PhysicsService } from '../services/physics.service';
+} from '../../core/constants/time.constants';
+import { BodyId } from '../../core/models/body-kind.model';
+import { BodyRuntimeState } from '../../core/models/body-runtime-state.model';
+import { BODY_BY_ID, CELESTIAL_BODIES } from '../../domain/bodies/body-catalog';
+import { PhysicsService } from './physics.service';
 
 @Injectable({ providedIn: 'root' })
 export class SimulationStore {

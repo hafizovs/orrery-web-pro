@@ -11,10 +11,10 @@ import { RealScaleBannerComponent } from './features/scale-controls/real-scale-b
 import { ScaleControlsComponent } from './features/scale-controls/scale-controls.component';
 import { SidebarComponent } from './features/sidebar/sidebar.component';
 import { TimePlayerComponent } from './features/time-player/time-player.component';
-import { ToolbarComponent } from './features/toolbar/toolbar.component';
-import { HotkeysService } from './services/hotkeys.service';
-import { I18nService } from './services/i18n.service';
-import { UiStore } from './state/ui.store';
+import { ToolbarComponent } from './core/layout/toolbar/toolbar.component';
+import { HotkeysService } from './core/services/hotkeys.service';
+import { I18nService } from './core/services/i18n.service';
+import { UiStore } from './core/ui/ui.store';
 
 @Component({
   selector: 'owp-root',

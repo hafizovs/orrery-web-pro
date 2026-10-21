@@ -1,13 +1,13 @@
 import { Injectable, inject } from '@angular/core';
-import { mapWorldAuToScenePx } from '../features/orrery-canvas/canvas-camera';
+import { mapWorldAuToScenePx } from '../../features/orrery-canvas/canvas-camera';
 import {
   CanvasRenderer,
   RenderSnapshot,
-} from '../features/orrery-canvas/canvas-renderer';
-import { CameraStore } from '../state/camera.store';
-import { CatalogStore } from '../state/catalog.store';
-import { SimulationStore } from '../state/simulation.store';
-import { UiStore } from '../state/ui.store';
+} from '../../features/orrery-canvas/canvas-renderer';
+import { CameraStore } from '../../features/orrery-canvas/camera.store';
+import { CatalogStore } from '../../features/sidebar/catalog.store';
+import { SimulationStore } from '../../features/orrery-canvas/simulation.store';
+import { UiStore } from '../ui/ui.store';
 import { I18nService } from './i18n.service';
 
 const DT_CLAMP_SECONDS = 0.05;

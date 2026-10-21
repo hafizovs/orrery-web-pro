@@ -13,10 +13,10 @@ import {
   formatPeriodDays,
   formatSpeedKmPerS,
 } from '../../domain/astronomy/format.util';
-import { I18nService } from '../../services/i18n.service';
-import { CatalogStore } from '../../state/catalog.store';
-import { SimulationStore } from '../../state/simulation.store';
-import { UiStore } from '../../state/ui.store';
+import { I18nService } from '../../core/services/i18n.service';
+import { CatalogStore } from '../sidebar/catalog.store';
+import { SimulationStore } from '../orrery-canvas/simulation.store';
+import { UiStore } from '../../core/ui/ui.store';
 
 interface CompareMetricRow {
   key: string;
