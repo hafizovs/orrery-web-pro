@@ -6,6 +6,27 @@ https://hafizovs.github.io/orrery-web-pro/
 
 Interactive Solar System simulator built with **Angular 22+** (standalone components, Signals, zoneless change detection, Canvas 2D).
 
+## About
+
+Orrery Web Pro is an interactive Solar System simulator built with Angular 22+ standalone components, Signals, zoneless change detection, and Canvas 2D. The shell is a toolbar, a canvas with a body list and detail card, and a footer time player. You can follow a body, compare up to three, switch real versus visual scale, and export the canvas as PNG.
+
+## Capabilities
+
+- Pause/play and time-scale presets on a log slider
+- Real scale and visual scale, with a banner when real scale leaves the view mostly empty
+- Toggles for labels, dwarf planets, and comets
+- Focus-follow for the selected body (Earth if none is selected)
+- Compare drawer for up to three bodies with live metrics
+- PNG screenshot, RU/EN language, and theme toggle
+
+## Functionality
+
+- Pause or play with `Space`, and raise or lower the time-scale preset with `+` / `=` and `-`
+- Select a body, press `F` to follow it (Earth if none is selected), and `Esc` to stop following
+- Switch real scale (`1`) or visual scale (`2`); toggle labels (`L`), dwarf planets (`D`), and comets (`C`)
+- Open the compare drawer, save a PNG with `S`, and switch theme (`T`) or language (`G`)
+- Hotkeys are ignored while typing in `input`, `textarea`, `select`, or `contenteditable` elements
+
 ## Install
 
 ```bash
