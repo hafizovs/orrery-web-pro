@@ -7,7 +7,7 @@ import { ThemeId } from '../models/theme.model';
 @Injectable({ providedIn: 'root' })
 export class UiStore {
   readonly theme = signal<ThemeId>('dark');
-  readonly locale = signal<LocaleId>('ru');
+  readonly locale = signal<LocaleId>('en');
   readonly scaleMode = signal<ScaleMode>('visual');
   readonly showLabels = signal(true);
   readonly showDwarfs = signal(false);
