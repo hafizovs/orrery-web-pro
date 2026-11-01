@@ -84,3 +84,7 @@ Hotkeys are ignored while typing in `input`, `textarea`, `select`, or `contented
 - Footer: time player (log slider + presets) and Real/Visual scale controls
 - Real-scale emptiness banner
 - Compare drawer (up to 3 bodies, live metrics)
+
+## Responsive layout
+
+Partial adaptive chrome for phone (~375px) and tablet (~768px): toolbars and panels stack or collapse on narrow viewports, with no page-level horizontal scroll. Desktop-first cores (canvas, boards, dense tables) stay simplified on small screens rather than a full mobile redesign.
