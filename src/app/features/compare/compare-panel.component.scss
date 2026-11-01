@@ -157,6 +157,27 @@
   box-shadow: var(--owp-focus-ring);
 }
 
+@media (max-width: 767px) {
+  :host {
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .owp-compare {
+    border-left: 0;
+  }
+
+  .owp-compare__table {
+    font-size: 11px;
+  }
+
+  .owp-compare__table th,
+  .owp-compare__table td {
+    padding: 5px 6px;
+  }
+}
+
 @keyframes owp-compare-in {
   from {
     transform: translateX(16px);

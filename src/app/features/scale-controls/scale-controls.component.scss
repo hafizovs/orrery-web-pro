@@ -47,3 +47,19 @@
   font-size: 11px;
   color: var(--owp-text-muted);
 }
+
+@media (max-width: 767px) {
+  .owp-scale-controls {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .owp-scale-controls__group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .owp-scale-controls__btn {
+    flex: 1 1 auto;
+  }
+}
