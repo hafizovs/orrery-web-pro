@@ -9,8 +9,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -52,6 +54,16 @@ button {
   --owp-z-banners: 20;
   --owp-z-compare: 30;
   --owp-focus-ring: 0 0 0 2px color-mix(in srgb, var(--owp-accent) 70%, transparent);
+  --owp-bp-tablet: 768px;
+  --owp-bp-phone: 375px;
+}
+
+@media (max-width: 899px) {
+  :root,
+  [data-theme='dark'],
+  [data-theme='light'] {
+    --owp-sidebar-width: min(320px, 100vw);
+  }
 }
 
 [data-theme='light'] {

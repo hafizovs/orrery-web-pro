@@ -90,3 +90,31 @@
   color: var(--owp-text-muted);
   white-space: nowrap;
 }
+
+@media (max-width: 767px) {
+  .owp-time-player {
+    width: 100%;
+  }
+
+  .owp-time-player__slider {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .owp-time-player__sim-time {
+    flex: 1 1 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 479px) {
+  .owp-time-player__play {
+    min-width: 72px;
+  }
+
+  .owp-time-player__preset {
+    padding: 0 7px;
+    font-size: 11px;
+  }
+}

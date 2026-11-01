@@ -58,6 +58,20 @@
   box-shadow: var(--owp-focus-ring);
 }
 
+@media (max-width: 767px) {
+  .owp-real-scale-banner {
+    left: 8px;
+    right: 8px;
+    bottom: max(120px, calc(72px + env(safe-area-inset-bottom, 0px)));
+    padding: 10px 12px;
+  }
+
+  .owp-real-scale-banner__text {
+    flex: 1 1 100%;
+    font-size: 12px;
+  }
+}
+
 @keyframes owp-banner-in {
   from {
     opacity: 0;
